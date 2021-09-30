@@ -17,13 +17,13 @@ function calculateStocks() {
 function calculateProfitAndLoss(initial, quantity, current) {
     if (initial > current) {
         var loss = (initial - current) * quantity;
-        var lossPercentage = (loss / initial) * 100;
-        outputDiv.innerText = `Oops! your loss is ${loss} and the percent is ${lossPercentage}% `;
+        var lossPercentage = (((initial - current) *100)/initial);
+        outputDiv.innerText = `Oops! your loss is ${loss} and your loss percent is ${lossPercentage}% `;
         // outputDiv.style.color = "red";
     } else if (current > initial) {
         var profit = (current - initial) * quantity;
-        var profitPercentage = (profit / initial) * 100;
-        outputDiv.innerText = `Hurray! your profit is ${profit} and the percent is ${profitPercentage}% `;
+        var profitPercentage = (((current - initial) *100)/initial);
+        outputDiv.innerText = `Hurray! your profit is ${profit} and your profit percent is ${profitPercentage}% `;
         // outputDiv.style.color = "green";
     } else {
         outputDiv.innerText = `No pain No gain and No gain No pain!`;

@@ -14,17 +14,17 @@
     <div class="container">
 
         <div class="container-center">
-            <label for="initial-price">Initial Price <input placeholder="Enter Initial Price Here" type="number" id="initial-price" /></label>
+            <label for="initial-price">Initial Price <input placeholder="Enter Initial Price Here" type="number" id="initial-price" min="1" oninput="validity.valid||(value='')" /></label>
         </div>
 
         <div class="container-center">
             <label for="stocks-quantity">Quantity of Stocks <input placeholder="Enter The Number Of Stocks"
-                    type="number" id="stocks-quantity" /></label>
+                    type="number" id="stocks-quantity" min="1" oninput="validity.valid||(value='')" /></label>
         </div>
 
         <div class="container-center">
             <label for="current-price">Current Price <input placeholder="Enter The Current Price" type="number"
-                    id="current-price" /></label>
+                    id="current-price" min="0" oninput="validity.valid||(value='')"/></label>
         </div>
 
         <button id="submit-button">Tell Me </button>
